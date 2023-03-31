@@ -1,79 +1,69 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { BiMenu } from "react-icons/bi";
-import { AiOutlineClose } from "react-icons/ai";
-import { GrLinkedin } from "react-icons/gr";
-import { BsGithub } from "react-icons/bs";
-import { FaLongArrowAltRight } from "react-icons/fa";
 
 import "./main.css";
+import Menu from "../../components/menu/Menu";
+import Landing from "../../components/landing/Landing";
+import Portfolio from "../../components/portfolio/Portfolio";
+import About from "../../components/about/About";
+import Contact from "../../components/contact/Contact";
+import Footer from "../../components/footer/Footer";
+import Link from "react-scroll/modules/components/Link";
 
 const Main = () => {
+  const [showMenu, setShowMenu] = useState(false);
+  const landing = useRef();
+  const portfolio = useRef();
+  const about = useRef();
+  const contact = useRef();
 
-    const [showMenu, setShowMenu] = useState(false)
+  const toggleShow = () => {
+    setShowMenu(true);
+  };
 
-    const toggleShow = () => {
-        setShowMenu(true)
-    }
+  const toggleClose = () => {
+    setShowMenu(false);
+  };
 
-    const toggleClose = () => {
-        setShowMenu(false)
-    }
+  const scrollToLanding = () => {
+    landing.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
+  const scrollToPortfolio = () => {
+    portfolio.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToAbout = () => {
+    about.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToContact = () => {
+    contact.current?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <>
-      <div className={`${showMenu ? 'menu menu__open' : 'menu'}`}>
-        <AiOutlineClose className="icon" onClick={toggleClose}/>
-        <div className="links-list">
-          <div className="link">Home</div>
-          <div className="link">Portfolio</div>
-          <div className="link">About</div>
-          <div className="link">Contact Me</div>
-        </div>
-        <div className="find-me-on">
-          <span className="text">Find me on</span>
-          <div className="icon-container">
-            <GrLinkedin className="icon linkedin" />
-          </div>
-          <div className="icon-container">
-            <BsGithub className="icon github" />
-          </div>
-        </div>
-        <div className="latest-project">
-          <a href="#">
-            <div className="top">
-              <p className="title">My Latest Project</p>
-              <FaLongArrowAltRight className="arrow-icon" />
-            </div>
-            <div className="p">
-              Check out TXSports, my recent solo built project. It provides
-              users a platform where they can join game events once they've
-              gathered up a team. Users can sign up as both players and
-              organizers if they want to create game events.
-            </div>
-          </a>
-        </div>
-      </div>
-      <div className="main">
+      <Menu
+        showMenu={showMenu}
+        setMenu={setShowMenu}
+        toggleClose={toggleClose}
+        scrollToLanding={scrollToLanding}
+        scrollToAbout={scrollToAbout}
+        scrollToContact={scrollToContact}
+        scrollToPortfolio={scrollToPortfolio}
+      />
+      <div className="main" ref={landing}>
         <div className="header">
           <div className="icon-container" onClick={toggleShow}>
             <BiMenu className="icon" />
           </div>
-          <button>See Portfolio</button>
+          <button onClick={scrollToPortfolio}>See Portfolio</button>
         </div>
-        <section className="landing">
-          <div className="left">
-            <div className="text-container">
-              <span className="name">David Nitu</span>
-              <h2 className="title">Full-Stack Developer</h2>
-              <span className="location">Birmimgham, UK</span>
-            </div>
-            <button className="download-cv">Download CV</button>
-          </div>
-          <div className="right">
-            <img src="/images/visual.png" alt="Technologies" />
-          </div>
-        </section>
+        <Landing />
       </div>
+      <Portfolio ref={portfolio} />
+      <About ref={about}/>
+      <Contact ref={contact}/>
+      <Footer />
     </>
   );
 };

@@ -1,0 +1,109 @@
+.about {
+    margin-top: 100px;
+    padding: 0 8%;
+    padding-bottom: 300px;
+}
+
+.about .section-heading {
+    font-size: 52px;
+    color: #1b263b;
+    font-weight: 600;
+    text-align: center;
+}
+
+.about .body {
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+}
+
+.about .body .summary {
+    border-right: 2px solid #1b263b17;
+    padding-right: 18px;
+}
+
+.about .body .summary .label {
+    color: #38A3A5;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.about .body .summary .text {
+    margin: 0;
+    margin-top: 6px;
+    font-size: 14px;
+    max-width: 520px;
+}
+
+.about .body .hobbies-interests {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.about .body .hobbies-interests .title {
+    color: #38A3A5;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.about .body .hobbies-interests .list {
+    display: flex;
+    max-width: 200px;
+    flex-wrap: wrap;
+    margin-top: 18px;
+}
+
+.about .body .hobbies-interests .list .item {
+    background-color: rgba(0, 0, 0, 0.424);
+    margin-left: 6px;
+    color: white;
+    margin-bottom: 6px;
+    padding: 2px 4px;
+}
+
+@media (min-width: 1400px) {
+    .about .body .summary .label,
+    .about .body .hobbies-interests .title {
+        font-size: 24px;
+    }
+
+    .about .body .summary .text {
+        margin-top: 10px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 960px) {
+    .about .body {
+        flex-direction: column;
+        margin-top: 140px;
+    }
+
+    .about .body .summary {
+        border: 0;
+    }
+
+    .about .body .summary .text {
+        font-size: 16px;
+    }
+
+    .about .body .summary .label,
+    .about .body .hobbies-interests .title{
+        font-size: 28px;
+    }
+
+    .about .body .hobbies-interests {
+        margin-left: 0;
+        margin-top: 80px;
+    }
+
+    .about .body .hobbies-interests .list {
+        max-width: 240px;
+    }
+
+    .about .body .hobbies-interests .list .item {
+        font-size: 18px;
+    }
+}

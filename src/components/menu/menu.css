@@ -1,0 +1,120 @@
+.menu {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: #0E0B0B;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-100%);
+    transition: .3s;
+    left: 0;
+    top: 0;
+}
+
+.menu .icon {
+    margin: 0 10%;
+    font-size: 72px;
+    margin-top: 52px;
+    align-self: flex-end;
+}
+
+.menu .links-list {
+    margin: 0 10%;
+    font-size: 22px;
+}
+
+.menu .links-list .link {
+    padding-left: 24px;
+    margin: 41px 0;
+    border-left: 2px solid #707070;
+    color: #707070;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.menu .links-list .link:hover {
+    border-left: 2px solid #fff;
+    color: #fff;
+}
+
+.menu .find-me-on {
+    margin: 0 10%;
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+}
+
+.menu .find-me-on .text {
+    margin-right: 32px;
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: 200;
+    color: rgb(195, 195, 195);
+}
+
+.menu .find-me-on .icon {
+    font-size: 32px;
+    margin: 0;
+    margin-right: 24px;
+    align-self: center;
+    z-index: 2;
+    background-color: rgb(255, 255, 255);
+    box-shadow: inset 1px 1px 1px #0E0B0B,
+                inset -1px -1px 1px #0E0B0B;
+    cursor: pointer;
+}
+
+.menu .find-me-on .icon.linkedin {
+    color: #0274b3;
+    border-radius: 3px;
+}
+
+.menu .find-me-on .icon.github {
+    color: #512B77;
+    border-radius: 50px;
+}
+
+.menu .latest-project {
+    margin: 0 10%;
+    margin-top: 15px;
+    width: 65%;
+    padding-bottom: 32px;
+    box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.096);
+}
+
+.menu .latest-project:hover {
+    box-shadow: inset 0px -2px 0px white;
+}
+
+.menu .latest-project a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu .latest-project .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.menu .latest-project .text span {
+    color: #0274b3;
+}
+
+.menu .latest-project .top .arrow-icon {
+    font-size: 32px;
+    margin-right: 20px;
+    transition: .1s;
+}
+
+.menu .latest-project:hover .arrow-icon {
+    margin-right: 0;
+}
+
+.menu__open {
+    transform: translateX(0%);
+}

@@ -1,0 +1,15 @@
+.footer {
+    background-color: #181818;
+    color: white;
+    padding: 32px 14%;
+}
+
+.footer .icon {
+    font-size: 32px;
+    margin-right: 20px;
+    color: white;
+}
+
+.footer .icon:hover {
+    color: rgba(255, 255, 255, 0.747);
+}

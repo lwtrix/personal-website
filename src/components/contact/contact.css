@@ -1,0 +1,112 @@
+.contact {
+    background-color: #1d1d1d;
+    margin-top: 80px;
+    padding-bottom: 180px;
+}
+
+.contact .section-heading {
+    font-size: 52px;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    margin: 0;
+    padding-top: 100px;
+}
+
+.contact .body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 120px;   
+}
+
+.contact .body .form {
+    margin-left: 100px;
+}
+
+.contact .body .form .form-control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.contact .body .form .form-control label {
+    color: white;
+    font-size: 18px;
+}
+
+.contact .body .form .form-control .input {
+    background-color: transparent;
+    box-shadow: inset -2px -2px 1px #38A3A5,
+    inset 1px 1px 1px rgba(255, 255, 255, 0.144);
+    border: none;
+    padding: 8px 24px;
+    margin-top: 6px;
+    width: 320px;
+    color: white;
+}
+
+.contact .body .form .form-control .input.textarea {
+    min-height: 200px;
+    max-height: 320px;
+    min-width: 320px;
+    max-width: 320px;
+}
+
+.contact .body .form .form-control .input:focus {
+    outline: 0;
+}
+
+.contact .body .form .send-btn {
+    background-color: #38A3A5;
+    border: none;
+    width: 100%;
+    height: 46px;
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s;
+  box-shadow: inset 3px 3px 1px #1B263B,
+                inset -3px -3px 1px #1B263B;
+}
+
+.contact .body .form .send-btn:hover {
+    background-color: #1B263B;
+}
+
+.contact .body .socials {
+    margin-top: 20px;
+}
+
+.contact .body .socials .container{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.contact .body .socials .container .icon {
+    font-size: 36px;
+    margin-right: 12px;
+    color: #38A3A5;
+}
+
+@media (max-width: 940px) {
+    .contact .body {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 80px;
+    }
+
+    .contact .body .form {
+        margin: 0;
+        order: 1;
+    }
+
+    .contact .body .socials {
+        order: 2;
+        margin-top: 80px;
+    }
+}
