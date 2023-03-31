@@ -8,7 +8,6 @@ import Portfolio from "../../components/portfolio/Portfolio";
 import About from "../../components/about/About";
 import Contact from "../../components/contact/Contact";
 import Footer from "../../components/footer/Footer";
-import Link from "react-scroll/modules/components/Link";
 
 const Main = () => {
   const [showMenu, setShowMenu] = useState(false);
