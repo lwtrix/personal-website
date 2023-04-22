@@ -11,7 +11,9 @@ function Landing() {
           <h2 className="title">Full-Stack Developer</h2>
           <span className="location">Birmimgham, UK</span>
         </div>
-        <button className="download-cv">Download CV</button>
+        <a download href="./cv/David Nitu CV.pdf">
+          <button className="download-cv">Download CV</button>
+        </a>
       </div>
       <div className="right">
         <img src="/images/visual.png" alt="Technologies" />
