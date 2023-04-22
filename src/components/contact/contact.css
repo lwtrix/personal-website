@@ -40,6 +40,7 @@
 
 .contact .body .form .form-control .input {
     background-color: transparent;
+    border-radius: 0;
     box-shadow: inset -2px -2px 1px #38A3A5,
     inset 1px 1px 1px rgba(255, 255, 255, 0.144);
     border: none;
