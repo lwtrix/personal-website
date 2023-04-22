@@ -31,7 +31,7 @@ const Contact = ({}, ref) => {
 
   return (
     <div className="contact" ref={ref}>
-      <h2 className="section-heading">Contact Me</h2>
+      <h2 className="section-heading">CONTACT ME</h2>
       <div className="body">
         <div className="socials">
           <div className="container">

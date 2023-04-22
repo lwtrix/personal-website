@@ -10,6 +10,8 @@ const Portfolio = ({}, ref) => {
       technologies: ["HTML", "CSS", "Javascript", "Bootstrap"],
       description:
         "Spotify clone made with HTML, CSS and a touch of JavaScript. Includes three pages: home, artist and album page. Features a search input to look up songs. Comes with a responsive design across all dimensions.",
+      demo: 'https://zpotify-clone.netlify.app',
+      github: 'https://github.com/lwtrix/spotify',  
       thumbnail:
         "https://res.cloudinary.com/dhlvd5ym6/image/upload/v1680263497/zpotify_nqmzhe.png",
     },
@@ -18,9 +20,19 @@ const Portfolio = ({}, ref) => {
       technologies: ["React", "Redux", "NodeJS", "Express", "Mongoose", "Bootstrap"],
       description:
         "Full-stack LinkedIn clone with users, posts and experiences resources, and a clean, responsive interface. Includes features such as: posting on feed, searching for users, edit profile and add or edit experiences.",
-      thumbnail:
+      github: 'https://github.com/lwtrix/linkedin',
+        demo: 'https://linkedin-mini.netlify.app',
+        thumbnail:
         "https://res.cloudinary.com/dhlvd5ym6/image/upload/v1680263508/linkedin_ssllfj.png",
     },
+    {
+      name: 'TXSports',
+      technologies: ['React', 'Redux', 'NodeJS', 'Express', 'Mongoose'],
+      description: 'TXSports was a original idea for my final capstone solo project at EPICODE bootcamp. It was a challenge to build this app and dictate the logic or anything else for that matter. It is definitely the largest project I have done, although I am not entirely happy with how it turned out, which is why I will start working on version 2 soon.',
+      demo: 'https://txsports.netlify.app',
+      github: 'https://github.com/lwtrix/txsports-client',
+      thumbnail: 'https://res.cloudinary.com/dhlvd5ym6/image/upload/v1682158860/txsports_cayrwb.png'
+    }
   ];
 
   const [displayProject, setDisplayProject] = useState(projects[0]);
@@ -34,7 +46,6 @@ const Portfolio = ({}, ref) => {
     <div className="portfolio" id="portfolio" ref={ref}>
       <h2 className="section-heading">Portfolio</h2>
       <div className="projects-links">
-        {console.log(displayProject)}
         {projects.map((project) => (
           <span
             className={`${displayProject.name === project.name ? 'link selected' : 'link'}`}
@@ -63,10 +74,10 @@ const Portfolio = ({}, ref) => {
             <p className="text">{displayProject.description}</p>
           </div>
           <div className="controls">
-            <div className="icon-container">
+            <a className="icon-container" href={displayProject.github}>
               <BsGithub className="icon" />
-            </div>
-            <button className="demo-btn">Demo</button>
+            </a>
+            <a className="demo-btn" href={displayProject.demo}>Demo</a>
           </div>
         </div>
       </div>

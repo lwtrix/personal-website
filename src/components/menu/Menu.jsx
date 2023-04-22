@@ -26,15 +26,15 @@ const Menu = ({showMenu, setMenu, toggleClose, scrollToLanding, scrollToPortfoli
         </div>
         <div className="find-me-on">
           <span className="text">Find me on</span>
-          <a className="icon-container" href='#'>
+          <a className="icon-container" href='https://www.linkedin.com/in/david-nitu-b9a5a41b7/'>
             <GrLinkedin className="icon linkedin" />
           </a>
-          <a className="icon-container" href='#'>
+          <a className="icon-container" href='https://github.com/lwtrix'>
             <BsGithub className="icon github" />
           </a>
         </div>
         <div className="latest-project">
-          <a href="#">
+          <a href="https://txsports.netlify.app">
             <div className="top">
               <p className="title">My Latest Project</p>
               <FaLongArrowAltRight className="arrow-icon" />
@@ -42,8 +42,8 @@ const Menu = ({showMenu, setMenu, toggleClose, scrollToLanding, scrollToPortfoli
             <div className="text">
               Check out <span>TXSports</span>, my recent solo built project. It's a platform
               where gamers can sign up for tournaments once they've created or
-              gathered up a team. Users can register as both players or
-              organizers, if they want to create game events.
+              gathered up a team. Users can also register as
+              organizers, allowing them to create events.
             </div>
           </a>
         </div>

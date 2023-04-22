@@ -22,6 +22,9 @@
 
 .contact .body .form {
     margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .contact .body .form .form-control {
@@ -40,17 +43,17 @@
     box-shadow: inset -2px -2px 1px #38A3A5,
     inset 1px 1px 1px rgba(255, 255, 255, 0.144);
     border: none;
-    padding: 8px 24px;
+    padding: 12px 24px;
     margin-top: 6px;
-    width: 320px;
+    width: 340px;
     color: white;
 }
 
 .contact .body .form .form-control .input.textarea {
     min-height: 200px;
-    max-height: 320px;
-    min-width: 320px;
-    max-width: 320px;
+    max-height: 340px;
+    min-width: 340px;
+    max-width: 340px;
 }
 
 .contact .body .form .form-control .input:focus {
@@ -108,5 +111,17 @@
     .contact .body .socials {
         order: 2;
         margin-top: 80px;
+    }
+}
+
+@media (max-width: 520px) {
+    .contact .body .form .form-control .input {
+        width: 272px;
+    }
+    .contact .body .form .form-control .input.input.textarea {
+        min-height: 200px;
+    max-height: 340px;
+    min-width: 272px;
+    max-width: 272px;
     }
 }

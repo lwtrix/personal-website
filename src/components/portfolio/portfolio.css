@@ -17,6 +17,7 @@
 .portfolio .projects-links {
   display: flex;
   margin-top: 60px;
+  flex-wrap: wrap;
 }
 
 .portfolio .projects-links .link {
@@ -27,6 +28,7 @@
   font-size: 20px;
   padding-bottom: 14px;
   cursor: pointer;
+  margin-bottom: 18px;
 }
 
 .portfolio .projects-links .link:hover {
@@ -75,6 +77,7 @@
 .portfolio .project-display .project-details .tech-list {
   display: flex;
   margin-top: 4px;
+  flex-wrap: wrap;
 }
 
 .portfolio .project-display .project-details .tech-list .tech {
@@ -83,6 +86,7 @@
   font-size: 12px;
   background-color: #ffffff23;
   padding: 2px 3px;
+  margin-bottom: 4px;
 }
 
 .portfolio .project-display .project-details .description-container {
@@ -127,6 +131,9 @@
   width: 210px;
   height: 45px;
   font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #38a3a5;
   border: none;
   text-transform: uppercase;
@@ -137,6 +144,7 @@
   font-weight: 600;
   box-shadow: inset 3px 3px 1px #1B263B,
                 inset -3px -3px 1px #1B263B;
+  text-decoration: none;
 }
 
 .portfolio .project-display .controls .demo-btn:hover {
@@ -177,4 +185,22 @@
     .portfolio .project-display .project-details .description-container .text {
         font-size: 16px;
     }
+}
+
+@media (max-width: 460px) {
+  .portfolio .projects-links .link{
+    font-size: 14px;
+  }
+
+  .portfolio .project-display {
+    margin-top: 24px;
+  }
+
+  .portfolio .project-display .project-details .name {
+    font-size: 38px;
+  }
+
+  .portfolio .project-display .project-details .tech-list {
+    margin-top: 6px;
+  }
 }

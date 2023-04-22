@@ -7,8 +7,8 @@ import './footer.css'
 const Footer = () => {
   return (
     <div className='footer'>
-        <a href="#" className='icon'><GrLinkedin /></a>
-        <a href="#" className='icon'><BsGithub /></a>
+        <a href="https://www.linkedin.com/in/david-nitu-b9a5a41b7/" className='icon'><GrLinkedin /></a>
+        <a href="https://github.com/lwtrix" className='icon'><BsGithub /></a>
     </div>
   )
 }

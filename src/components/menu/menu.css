@@ -118,3 +118,9 @@
 .menu__open {
     transform: translateX(0%);
 }
+
+@media (max-width: 520px) {
+    .menu .latest-project {
+        display: none;
+    }
+}

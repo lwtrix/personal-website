@@ -5,7 +5,7 @@ import './about.css'
 const About = ({}, ref) => {
   return (
     <div className='about' ref={ref}>
-        <h2 className='section-heading'>About Me</h2>
+        <h2 className='section-heading'>ABOUT ME</h2>
         <div className="body">
             <div className="summary">
                 <span className="label">Summary</span>
